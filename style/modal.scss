@@ -1,0 +1,43 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  overflow-y: auto;
+  display: none;
+
+  &_open {
+    display: flex;
+  }
+  &__main {
+    cursor: default;
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+  }
+  &__close {
+    color: $color-gray;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    outline: 1px solid transparent;
+    outline-offset: 3px;
+
+    &:focus-visible {
+      color: $color-accent-1;
+      outline-color: $color-accent-1;
+      border-radius: 3px;
+    }
+  }
+
+  @include for-medium-mobile {
+    padding: 10px;
+  }
+  @include for-low-desktop {
+    padding: 20px;
+    &__close {
+      top: 24px;
+      right: 24px;
+    }
+  }
+}

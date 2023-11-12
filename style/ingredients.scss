@@ -1,0 +1,38 @@
+.ingredients {
+  &__title {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 130%;
+    margin-bottom: 4px;
+  }
+  &__list {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 130%;
+    margin-bottom: 4px;
+
+    &-item {
+      margin-bottom: 2px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__calories {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 130%;
+    color: $color-gray;
+  }
+  @include for-low-desktop {
+    &__title {
+      font-size: 12px;
+    }
+    &__list {
+      font-size: 12px;
+    }
+    &__calories {
+      font-size: 12px;
+    }
+  }
+}

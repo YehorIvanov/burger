@@ -1,0 +1,110 @@
+.header {
+  background-image: url("data:image/svg+xml, %3Csvg id='header' width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='100' cy='100' r='100' fill='%23ffab08' /%3E%3C/svg%3E");
+  background-size: 611px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding: 24px 0 30px;
+  margin-bottom: 30px;
+
+  @include for-medium-mobile {
+    background-size: 1440px;
+    padding-bottom: 44px;
+  }
+
+  @include for-tablet {
+    background-size: 2540px;
+  }
+
+  @include for-low-desktop {
+    background-size: 2880px;
+    padding-bottom: 63px;
+    margin-bottom: 40px;
+  }
+
+  &__container {
+    @include for-medium-mobile {
+      max-width: 480px;
+    }
+
+    @include for-tablet {
+      max-width: calc(var(--container-wigth) + (var(--container-padding) * 2));
+    }
+
+    @include for-low-desktop {
+      max-width: calc(784px + (var(--container-padding) * 2));
+    }
+  }
+
+  &__logo {
+    width: 150px;
+    color: #fff;
+    margin: 0 auto 24px;
+  }
+
+  &__title-container {
+    padding-bottom: 224px;
+    background: url('img/pic.svg') bottom/227px no-repeat;
+    color: #fff;
+    text-align: center;
+
+    @include for-medium-mobile {
+      padding-bottom: 0;
+      padding-left: 180px;
+      padding-top: 27px;
+      text-align: left;
+      background-position: left;
+      background-size: contain;
+      min-height: 190px;
+    }
+
+    @include for-tablet {
+      padding-left: 237px;
+      min-height: 229px;
+    }
+
+    @include for-low-desktop {
+      padding-left: 347px;
+      min-height: 290px;
+    }
+  }
+
+  &__title {
+    margin: 0 auto 16px;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 120%;
+
+    @include for-tablet {
+      font-size: 36px;
+      margin-bottom: 26px;
+    }
+    @include for-low-desktop {
+      font-size: 50px;
+      margin-bottom: 52px;
+    }
+
+    &-text {
+      display: block;
+
+      &_red {
+        color: $color-accent-1;
+      }
+    }
+  }
+
+  &__appeal {
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 auto 19px;
+
+    @include for-medium-mobile {
+      text-align: left;
+    }
+    @include for-low-desktop {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+    }
+  }
+}

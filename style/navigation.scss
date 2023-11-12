@@ -1,0 +1,90 @@
+.navigation {
+  margin-bottom: 30px;
+
+  @include for-low-desktop {
+    margin-bottom: 50px;
+  }
+
+  &__container {
+    padding: 0;
+    min-width: 100vw;
+  }
+  &__list {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    column-gap: 8px;
+    padding: 0 calc((100vw / 2) - (var(--container-width) / 2));
+
+    @include for-tablet {
+      column-gap: 12px;
+      padding: 0 calc((100vw / 2) - (var(--container-width) / 2));
+    }
+
+    @include for-low-desktop {
+      column-gap: 24px;
+      padding: 0 calc((100vw / 2) - (var(--container-width) / 2));
+    }
+
+    @include for-lg-desktop {
+      column-gap: 24px;
+      padding: 0 calc((100vw / 2) - (var(--container-width) / 2));
+    }
+  }
+  &__button {
+    background-color: $color-white;
+    border-radius: 50px;
+    padding: 8px 14px 8px 46px;
+    font-size: 12px;
+    height: 30px;
+    white-space: nowrap;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: 14px center;
+    @include button-efects;
+
+    @include for-low-desktop {
+      padding: 9px 14 px 9px 46px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    &:hover,
+    &:focus {
+      outline: 1px solid $color-accent-1;
+      outline-offset: -1px;
+    }
+
+    &_active {
+      background-color: $color-accent-2;
+      pointer-events: none;
+    }
+    &_burger {
+      background-image: url('img/burger.png');
+    }
+    &_snack {
+      background-image: url('img/snack.png');
+    }
+    &_hot-dog {
+      background-image: url('img/hot-dog.png');
+    }
+    &_combo {
+      background-image: url('img/combo.png');
+    }
+    &_shawarma {
+      background-image: url('img/shawarma.png');
+    }
+    &_pizza {
+      background-image: url('img/pizza.png');
+    }
+    &_wok {
+      background-image: url('img/wok.png');
+    }
+    &_desert {
+      background-image: url('img/desert.png');
+    }
+    &_sauce {
+      background-image: url('img/sauce.png');
+    }
+  }
+}

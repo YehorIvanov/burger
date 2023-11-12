@@ -1,0 +1,31 @@
+.count {
+  width: 74px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $color-bg-lighter-gray;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+
+  &__minus,
+  &__plus {
+    width: 8px;
+    border-radius: 40%;
+    @include button-efects;
+  }
+  @include for-low-desktop {
+    width: 84px;
+    height: 40px;
+    border-radius: 12px;
+    padding: 9px 12px;
+    font-size: 16px;
+    &__minus,
+    &__plus {
+      width: 10px;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+.footer {
+  padding: 24px 0;
+  background-color: #fff;
+
+  &__logo {
+    width: 196px;
+    color: $color-accent-1;
+    margin-bottom: 24px;
+  }
+  &__adress {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 34px;
+    font-style: normal;
+  }
+  &__title {
+    font-size: 18px;
+    line-height: 100%;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+  &__link-phone {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    line-height: 130%;
+  }
+  &__list {
+    display: flex;
+    gap: 16px;
+  }
+  &__list-item {
+    color: $color-accent-1;
+  }
+  &__copyright {
+    margin-bottom: 4px;
+  }
+}
+@include for-tablet {
+  .footer {
+    padding: 40px 0;
+
+    &__logo {
+      margin-bottom: 36px;
+    }
+    &__adress {
+      display: flex;
+      flex-direction: row;
+      gap: 0;
+      margin-bottom: 56px;
+    }
+    &__contact {
+      flex-grow: 1;
+    }
+    &__copyright {
+      margin-bottom: 4px;
+    }
+  }
+}
+
+@include for-low-desktop {
+  .footer {
+    padding: 52px 0;
+
+    &__content {
+      display: grid;
+      grid-template-areas: 'logo adress' 'development .';
+      gap: 35px;
+    }
+    &__logo {
+      width: 300px;
+      grid-area: logo;
+      margin-bottom: 0;
+    }
+    &__adress {
+      margin-bottom: 0;
+      grid-area: adress;
+      gap: 50px;
+      margin-bottom: 0;
+      justify-content: flex-end;
+    }
+    &__contact {
+      flex-grow: unset;
+    }
+    &__title {
+      margin-bottom: 24px;
+      font-size: 24px;
+      &_sn {
+        margin-bottom: 22px;
+      }
+    }
+    &__link-phone {
+      font-size: 16px;
+    }
+  }
+}
+@include for-lg-desktop {
+  .footer {
+    padding: 52px 0;
+
+    &__content {
+      grid-template-columns: 1fr 1fr;
+      gap: 35px 30px;
+    }
+    &__adress {
+      justify-content: flex-start;
+      gap: 0;
+    }
+    &__contact {
+      flex-grow: 1;
+    }
+  }
+}

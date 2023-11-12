@@ -1,0 +1,42 @@
+.visually-hiden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.container {
+  max-width: calc(var(--container-width) + (2 * var(--container-padding)));
+  padding: 0 var(--container-padding);
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.currency {
+  font-weight: 400;
+}
+
+.development {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  grid-area: development;
+}
+
+@mixin button-efects {
+  &:hover {
+    background-color: $color-accent-2;
+    outline: none;
+  }
+  &:focus-visible {
+    background-color: $color-accent-3;
+    outline: none;
+  }
+  &:active {
+    transform: translate(1px, 2px);
+    outline: none;
+  }
+  &:disabled {
+    background-color: $color-bg-lighter-gray;
+    color: #acacac;
+    outline: none;
+  }
+}
